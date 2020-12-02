@@ -21,6 +21,9 @@ app.post("/save/:worldId", (req, res) => {
   );
 });
 
-app.listen(8080, () => {
-  console.log("Listening to port 8080...");
+const host = "localhost"; //"127.0.0.1";
+const port = 3000;
+
+app.listen(port, host, () => {
+  console.log(`Listening to http://${host}:${port}...`);
 });
